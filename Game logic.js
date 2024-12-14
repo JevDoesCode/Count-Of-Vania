@@ -154,6 +154,8 @@ const bossNormalForm = document.querySelector(".bossNormalForm");
 function dialogueErase() {
     const bossContainer = document.querySelector(".boss-container");
 
+    skipCounter++;
+
     dialogueContainer.style.display = "none";
     dungeonCutscene.style.display = "block";
     dungeonCutscene.play();
@@ -377,7 +379,7 @@ function skip() {
             introVideo.style.display = "none";
             dialogueContainer.style.display = "block";
             break;
-        case 2:
+        default:
             bossFightToggleAudio();
             audio.pause();
             dungeonCutscene.pause();
