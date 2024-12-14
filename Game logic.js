@@ -85,6 +85,9 @@ function playIntroVideo() {
     introVideo.addEventListener("ended", () => {
         introVideo.style.display = "none";
         dialogueContainer.style.display = "block";
+
+        skipCounter++;
+        
         IntroToggleAudio();
     });
 }
